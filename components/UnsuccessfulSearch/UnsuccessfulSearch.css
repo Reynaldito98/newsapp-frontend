@@ -1,0 +1,22 @@
+.unsuccessful {
+    background-color: #fff;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.unsuccessful__description {
+    color: #000;
+    max-width: 1100px;
+    font-size: 42px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.unsuccessful__image {
+    width: 300px;
+    height: 300px;
+}

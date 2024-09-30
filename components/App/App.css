@@ -1,0 +1,21 @@
+.page {
+  width: 100vw;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 26px;
+  background-color: #fff;
+}
+
+.main-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../images/main-background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 576px;
+  opacity: 0.9;
+}
+
+.saved-news {
+  background-color: #fff;
+}

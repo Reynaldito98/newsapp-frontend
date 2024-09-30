@@ -1,0 +1,52 @@
+.saved-article {
+    background-color: #fff;
+    padding-top: 40px;
+    padding-bottom: 56px;
+    width: 100vw;
+}
+
+.saved-article__heading {
+    padding-left: 104px;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B2280;
+    opacity: 0.5;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;   
+}
+
+.saved-article__description {
+    padding-left: 104px;
+    max-width: 530px;
+    margin-top: 28px;
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    color: #1A1B22;
+}
+
+.saved-article__keyword {
+    padding-left: 104px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 712px;
+    color: #000;
+}
+
+.saved-article__section-list {
+    margin-top: 0px;
+    color: #000;
+    background-color: #F5F6F7;
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    grid-gap: 30px 16px;
+    width: 100%;
+    padding-top: 62px;
+    padding-bottom: 62px;
+    padding-left: 0px;
+    justify-content: center;
+}
