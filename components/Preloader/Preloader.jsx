@@ -3,7 +3,7 @@ import './Preloader.css';
 
 function Preloader() {
     return (
-        <img src={preloader} className = "circle-preloader" />
+        <img src={preloader} alt="preloader" className = "circle-preloader" />
     )
 }
 

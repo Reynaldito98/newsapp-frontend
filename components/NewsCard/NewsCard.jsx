@@ -22,7 +22,7 @@ function NewsCard(props) {
     }, []);
 
     return(
-        <div className="news-card">
+        <li className="news-card">
             <img src={props.card.urlToImage} alt={props.card.title} className="news-card__image"></img>
             <div className="news-card__container">
                 <p className="news-card__date">{formattedDate}</p>
@@ -51,7 +51,7 @@ function NewsCard(props) {
                     <p className="news-card__keyword">{props.card.keyword}</p> :
                     ''
             }
-        </div>
+        </li>
     )
 }
 

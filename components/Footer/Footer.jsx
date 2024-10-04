@@ -8,12 +8,12 @@ function Footer(props) {
         <footer className={`footer ${props.backgorundColor}`}>
             <p className="footer__site-info">&copy; 2024 Supersite, Powered by News API</p>
 
-            <div className="footer__contact">
-                <Link to="/" className="footer__home-btn">Home</Link>
-                <p className="footer__tripleten">TripleTen</p>
-                <img src={facebook} alt="facebook-logo" className="footer__facebook"></img>
-                <img src={instagram} alt="instagram-logo" className="footer__instagram"></img>
-            </div>
+            <nav className="footer__contact">
+                <Link to="/" className="footer__link" target="_blank">Home</Link>
+                <Link to="https://tripleten.com/" className="footer__link" target="_blank">TripleTen</Link>
+                <Link to="https://facebook.com/tripleten" target="_blank"><img src={facebook} alt="facebook-logo" className="footer__social-media"></img></Link>
+                <Link to="https://instagram.com/tripleten" target="_blank"><img src={instagram} alt="instagram-logo" className="footer__social-media"></img></Link>
+            </nav>
         </footer>    
     )
 }

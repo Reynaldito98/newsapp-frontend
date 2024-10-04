@@ -28,7 +28,7 @@
 }
 
 .signup__title {
-    font-family: Roboto, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 24px;
     line-height: 28.13px;
@@ -47,6 +47,7 @@
     font-weight: 400;
     line-height: 14.52px;
     color: #2F71E5;
+    font-family: 'Inter', sans-serif;
 }
 
 .signup__label_margin {
@@ -74,6 +75,11 @@
     height: 64px;
     border-radius: 30px;
     transition: 0.25s ease-in-out;
+    background-color: #2F71E5;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
 }
 
 .signup__button:hover {
@@ -101,6 +107,11 @@
     color: #000;
     background-color: transparent;
     width: 100%;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
 }
 
 .signup__or-signin:hover {

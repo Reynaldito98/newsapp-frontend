@@ -1,4 +1,4 @@
-.signin{
+.modal{
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -13,12 +13,12 @@
     transition: visibility 0.25s, opacity 0.25s ease-in-out;
 }
 
-.signin_opened{
+.modal_opened{
     visibility: visible;
     opacity: 1;
 }
 
-.signin__container {
+.modal__container {
     width: 430px;
     background-color: #fff;
     border-radius: 20px;
@@ -27,7 +27,7 @@
     position: relative;
 }
 
-.signin__title {
+.modal__title {
     font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 24px;
@@ -36,41 +36,50 @@
     padding: 0;
 }
 
-.signin__form {
+.modal__form {
     display: flex;
     flex-direction: column;
     margin-top: 22px;
 }
 
-.signin__label {
+.modal__fieldset {
+    padding: 0px;
+    border: none;
+    font-weight: 400;
+    line-height: 15px;
+}
+
+.modal__label {
     font-size: 12px;
     font-weight: 400;
     line-height: 14.52px;
     color: #2F71E5;
     font-family: 'Inter', sans-serif;
+    display: block;
 }
 
-.signin__label_margin {
+.modal__label_margin {
     margin-top: 31px;
 }
 
-.signin__input {
+.modal__input {
     margin-top: 9px;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid #000;
     padding-bottom: 11px;
     color: #000;
+    width: 100%;
 }
 
-.signin__input::placeholder {
+.modal__input::placeholder {
     font-size: 14px;
     line-height: 16.94px;
     font-weight: 400;
     font-family: 'Inter', sans-serif;
 }
 
-.signin__button {
+.modal__button {
     margin-top: 50px;
     height: 64px;
     border-radius: 30px;
@@ -82,27 +91,33 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.signin__button:hover {
+.modal__button:hover {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
-.signin__close-img {
+.modal__button:disabled {
+    background-color: #E6E8EB;
+    color: #B6BCBF;
+
+}
+
+.modal__close-img {
     width: 40px;
     height: 40px;
 }
 
-.signin__close-btn {
+.modal__close-btn {
     background-color: transparent;
     position: absolute;
     right: -65px;
     top: -60px;
 }
 
-.signin__close-btn:hover {
+.modal__close-btn:hover {
     border: none;
 }
 
-.signin__or-signup {
+.modal__switch {
     margin-top: 16px;
     color: #000;
     background-color: transparent;
@@ -114,28 +129,36 @@
     line-height: 17px;
 }
 
-.signin__or-signup:hover {
+.modal__switch:hover {
     border: none;
 }
 
-.signin__signup {
+.modal__switch-link {
     background-color: transparent;
     color: rgb(48, 138, 222);
     padding: 0;
 }
 
-.signin__signup:hover {
+.modal__switch-link:hover {
     border: none;
 }
 
+.modal__error-message {
+    color: rgb(229, 16, 16);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    position: absolute;
+    display: block;
+}
+
 @media screen and (max-width: 600px) {
-    .signin__container {
+    .modal__container {
         width: 200px;
     }
 }
 
 @media screen and (max-width: 360px) {
-    .signin__close-btn {
+    .modal__close-btn {
         right: -20px;
     }
 }

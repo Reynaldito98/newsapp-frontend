@@ -1,8 +1,7 @@
 .card-section {
     margin-top: 0px;
+    padding-left: 0px;
     padding-top: 80px;
-    padding-left: 104px;
-    padding-right: 104px;
     padding-bottom: 80px;
     color: #000;
     background-color: #F5F6F7;
@@ -15,7 +14,8 @@
     line-height: 46px;
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
-    margin: 0px;  
+    margin: 0px; 
+    padding-left: 104px; 
 }
 
 .card-section__list{
@@ -23,14 +23,15 @@
     display: grid;
     grid-template-columns: 400px 400px 400px;
     grid-gap: 30px 16px;
-    width: 100%;
+    justify-content: center;
 }
 
 .card-section__show-more {
     margin-top: 65px;
-    width: 240px;
+    width: 288px;
+    height: 64px;
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 35px;
     border: none;
     font-size: 18px;
     line-height: 24px;
@@ -38,11 +39,17 @@
     color: #000;
     align-self: center;
     font-family: 'Roboto', sans-serif;
-    transition: box-shadow 0.4s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 .card-section__show-more:hover {
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    background-color: #E8E8E8;
+    opacity: 0.9;
+}
+
+.card-section__show-more:active {
+    border: none;
 }
 
 @media screen and (max-width: 1350px) {
