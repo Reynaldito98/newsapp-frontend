@@ -89,6 +89,7 @@
     line-height: 24px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
+    cursor: pointer;
 }
 
 .modal__button:hover {
@@ -96,9 +97,7 @@
 }
 
 .modal__button:disabled {
-    background-color: #E6E8EB;
-    color: #B6BCBF;
-
+    color: #fff;
 }
 
 .modal__close-img {
@@ -111,6 +110,8 @@
     position: absolute;
     right: -65px;
     top: -60px;
+    cursor: pointer;
+    border: none;
 }
 
 .modal__close-btn:hover {
@@ -137,6 +138,7 @@
     background-color: transparent;
     color: rgb(48, 138, 222);
     padding: 0;
+    border: none;
 }
 
 .modal__switch-link:hover {

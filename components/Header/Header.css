@@ -1,6 +1,6 @@
 .header {
     display: flex;
-    width: 100%;
+    width: 100vw;
     justify-content: space-between;
     height: 80px;
     align-items: center;
@@ -8,11 +8,11 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.header__border_white {
+.header_border-bottom-color_white {
     border-bottom: 1px solid #fff;
 }
 
-.header__border_gray {
+.header_border-bottom-color_gray {
     border-bottom: 1px solid #D1D2D6;
 }
 
@@ -45,6 +45,7 @@
     display: flex;
     align-items: center;
     margin-top: 3px;
+    text-decoration: none;
 }
 
 .header__home-btn:hover {
@@ -71,6 +72,7 @@
     align-items: center;
     justify-content: center;    
     width: 178px;
+    text-decoration: none;
 }
 
 .header__profile {
@@ -81,6 +83,10 @@
     padding: 12px 19px;
     background-color: transparent;
     transition: 0.25s ease-in-out;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 .header__profile:hover {
@@ -100,13 +106,36 @@
     border: 1px solid #000;
 }
 
-.header__font-color_white {
+.header__home-btn_color_white {
     color: #fff;
 }
 
-.header__font-color_black {
-    color: #1A1B22;
+.header__home-btn_color_black {
+    color: #000;
+}
 
+.header__saved-article_color_white {
+    color: #fff;
+}
+
+.header__saved-article_color_black {
+    color: #1A1B22;
+}   
+
+.header__profile_color_white {
+    color: #fff;
+}
+
+.header__profile_color_black {
+    color: #1A1B22;
+} 
+
+.header__signin_color_white {
+    color: #fff;
+}
+
+.header__signin_color_black {
+    color: #1A1B22;
 }
 
 .header__signin {
@@ -119,6 +148,7 @@
     width: 176px;
     border-radius: 25px;
     transition: 0.25s ease-in;
+    cursor: pointer;
 }
 
 .header__signin:hover {
@@ -140,6 +170,10 @@
 
     .header__right-column {
         padding-right: 10px;
+    }
+
+    .header__input {
+        width: 280px;
     }
 }
 
@@ -169,19 +203,43 @@
 
 @media screen and (max-width: 420px) {
     .header__logo {
-        width: 100px;
-        height: 15px;
+        max-width: 100px;
+        max-height: 20px;
     }
 
     .header__home-btn {
-        font-size: 10px;
-        line-height: 14px;
+        font-size: 18px;
+        line-height: 22px;
     }
 
     .header__signin {
-        font-size: 10px;
-        line-height: 14px;
         height: 35px;
         width: 100px;
+    }
+}
+
+@media screen and (max-width: 645px) {
+    .header {
+        height: 190px;
+        padding-bottom: 10px;
+    }
+
+    .header__logo {
+        padding-left: 0px;
+    }
+
+    .header__right-column {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0px;
+    }
+
+    .header__home-btn {
+        border: none;
+    }
+
+    .header__saved-article {
+        border: none;
     }
 }

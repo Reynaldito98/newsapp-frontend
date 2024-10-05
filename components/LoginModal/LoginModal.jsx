@@ -8,7 +8,7 @@ function LoginModal(props) {
     const [passwordValid, setPasswordValid] = useState(false);
     const [passwordErrorMessage, setPasswordErrorMessage] = useState('');
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('')
+    const [password, setPassword] = useState('');
 
     function handleEmailInput(evt) {
         setEmail(evt.target.value);

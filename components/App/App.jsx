@@ -144,13 +144,13 @@ function App() {
         <Routes>
           <Route path='/' element={
             <div className="main-container">
-              <Header borderBottom='header__border_white' fontColor='header__font-color_white' imageSrc={newsLogo} isLoggedIn={isLoggedIn} logoutSrc={logOutWhite} border='header__profile_border-color_white' homeBorder='header__home-btn_border-color_white' handleLogOutButton={handleLogOutButton} handleModal={handleLogInModalOpened} borderBottom2=""/>
+              <Header borderBottom='header_border-bottom-color_white' fontColor='header__home-btn_color_white' fontColorSavedArticle="header__saved-article_color_white" imageSrc={newsLogo} isLoggedIn={isLoggedIn} logoutSrc={logOutWhite} border='header__profile_border-color_white' homeBorder='header__home-btn_border-color_white' handleLogOutButton={handleLogOutButton} handleModal={handleLogInModalOpened} borderBottom2="" fontColorProfile="header__profile_color_white" fontColorSignin="header__signin_color_white"/>
               <Main handleSubmit={handleSearchNews} setKeyword={setKeyword}/>
           </div>
           }></Route>
           <Route path='/saved-news' element={
             <div className="saved-news">
-              <Header borderBottom='header__border_gray' fontColor='header__font-color_black' imageSrc={newsLogoBlack} isLoggedIn={isLoggedIn} logoutSrc={logOut} border='header__profile_border-color_black' borderBottom2="header__saved-article_border-bottom-color_black" handleLogOutButton={handleLogOutButton} homeBorder=""/>
+              <Header borderBottom='header_border-bottom-color_gray' fontColor='header__home-btn_color_black' imageSrc={newsLogoBlack} isLoggedIn={isLoggedIn} logoutSrc={logOut} border='header__profile_border-color_black' borderBottom2="header__saved-article_border-bottom-color_black" handleLogOutButton={handleLogOutButton} homeBorder="" fontColorSavedArticle="header__saved-article_color_black" fontColorProfile="header__profile_color_black" fontColorSignin="header__signin_color_black"/>
               <SavedArticles newsData={newsData} handleUnsaveCard={handleUnsaveCard} setSavedCards={setSavedCards} savedCards={savedCards} keyword={keyword} keywords={keywords} keywordText={keywordText} handleKeywords={handleKeywords} handleKeywordText={handleKeywordText} isLoggedIn={isLoggedIn}/>
             </div>
           }></Route>

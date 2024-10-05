@@ -13,11 +13,11 @@ function Header(props) {
                 {props.isLoggedIn 
                 ? 
                 <>
-                    <Link to="/saved-news" className={`header__saved-article ${props.fontColor} ${props.borderBottom2}`}>Saved articles</Link>
-                    <button className={`header__profile ${props.fontColor} ${props.border}`} onClick={props.handleLogOutButton}>Reynaldo Perez <img src={props.logoutSrc} alt="logout logo" className="header__logout"></img></button>
+                    <Link to="/saved-news" className={`header__saved-article ${props.fontColorSavedArticle} ${props.borderBottom2}`}>Saved articles</Link>
+                    <button className={`header__profile ${props.fontColorProfile} ${props.border}`} onClick={props.handleLogOutButton}>Reynaldo Perez <img src={props.logoutSrc} alt="logout logo" className="header__logout"></img></button>
                 </>
                 : 
-                    <button type="button" className={`header__signin ${props.fontColor}`} onClick={props.handleModal}>Sign in</button>} 
+                    <button type="button" className={`header__signin ${props.fontColorSignin}`} onClick={props.handleModal}>Sign in</button>} 
             </nav>
         </header>
     )
