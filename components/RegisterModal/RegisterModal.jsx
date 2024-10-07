@@ -55,7 +55,7 @@ function RegisterModal(props) {
     }
 
     return (
-        <ModalWithForm modalOpened={props.modalOpened} title="Sign up" switchText="Sign in" onClick={props.handleLoginOpen} onClose={props.onClose} isValid={emailValid && passwordValid && usernameValid}>
+        <ModalWithForm modalOpened={props.modalOpened} title="Sign up" switchText="Sign in" onClick={props.handleLoginOpen} onClose={props.onClose} isValid={emailValid && passwordValid && usernameValid} showForm={true}>
             <fieldset className="modal__fieldset">
                 <label htmlFor="email" className="modal__label">Email</label>
                 <input type="email" id="email" placeholder="Enter email" name="email" className="modal__input" required onChange={handleEmailInput} value={email} ></input>

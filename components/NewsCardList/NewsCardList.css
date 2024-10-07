@@ -13,7 +13,7 @@
     font-size: 40px;
     line-height: 46px;
     font-weight: 400;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', sans-serif;
     margin: 0px; 
     padding-left: 104px; 
 }
@@ -24,6 +24,7 @@
     grid-template-columns: 400px 400px 400px;
     grid-gap: 30px 16px;
     justify-content: center;
+    list-style-type: none;
 }
 
 .card-section__show-more {

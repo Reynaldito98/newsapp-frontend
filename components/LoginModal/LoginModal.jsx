@@ -39,7 +39,7 @@ function LoginModal(props) {
     }
 
     return (
-        <ModalWithForm modalOpened={props.modalOpened} title="Sign in" switchText="Sign up" onClick={props.handleRegisterOpen} onClose={props.onClose} isValid={emailValid && passwordValid}>
+        <ModalWithForm modalOpened={props.modalOpened} title="Sign in" switchText="Sign up" onClick={props.handleRegisterOpen} onClose={props.onClose} isValid={emailValid && passwordValid} showForm={true}>
             <fieldset className="modal__fieldset">
                 <label htmlFor="email2" className="modal__label">Email</label>
                 <input type="email" id="email2" placeholder="Enter email" value={email} name="email" className="modal__input" onChange={handleEmailInput} required></input>

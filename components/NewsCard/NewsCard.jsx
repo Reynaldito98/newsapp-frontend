@@ -41,9 +41,9 @@ function NewsCard(props) {
                 }}
              >{
                 props.isLoggedIn ? 
-                    <img src={savedCard?props.imageSrc2:props.imageSrc}></img>
+                    <img src={savedCard?props.imageSrc2:props.imageSrc} alt="signin logo"></img>
                     :
-                    <img src={props.signinLogo}></img>
+                    <img src={props.signinLogo} alt="save logo"></img>
              }</button>
             </div>
             {

@@ -14,7 +14,6 @@ function SavedArticles(props) {
         if(storedCards) {
             const filteredCards = [];
             const newCardTitles = [];
-            const cardTitles = JSON.parse(storedCards).map(item => item.title);
             JSON.parse(storedCards).forEach(item => {
                 if(!newCardTitles.includes(item.title)) {
                     filteredCards.push(item);

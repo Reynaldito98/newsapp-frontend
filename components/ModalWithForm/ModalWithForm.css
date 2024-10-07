@@ -118,6 +118,24 @@
     border: none;
 }
 
+.modal__signin {
+    transition: 0.3s ease-in-out;
+    margin-top: 14px;
+    background-color: transparent;
+    color: #000;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    padding: 0px;
+    color: #2F71E5;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.modal__signin:hover {
+    color: #000;
+}
+
 .modal__switch {
     margin-top: 16px;
     color: #000;
