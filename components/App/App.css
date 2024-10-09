@@ -1,7 +1,6 @@
 .page {
   width: 100vw;
-  outline: 1px solid transparent;
-  outline-offset: -1px;
+  box-sizing: border-box;
   padding: 0px;
   margin: 0px;
   font-family: 'Inter', sans-serif;
