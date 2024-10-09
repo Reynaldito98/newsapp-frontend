@@ -42,6 +42,14 @@
     border: none;
 }
 
+.footer__link-container {
+    display: flex;
+}
+
+.footer__social-media-container {
+    display: flex;
+}
+
 .footer__social-media {
     width: 20px;
     height: 20px;
@@ -55,17 +63,33 @@
 
 @media screen and (max-width: 630px) {
     .footer{
-        flex-direction: column;
+        flex-direction: column-reverse;
         padding-left: 20px;
+        margin-top: 20px;
     }
 }
 
 @media screen and (max-width: 430px) {
     .footer__contact{
         font-size: 15px;
+        width: 320px;
     }
 
     .footer__site-info{
         width: 300px;
+    }
+
+    .footer__link-container {
+        flex-direction: column;
+
+    }
+
+    .footer__link {
+        height: 48px;
+    }
+
+    .footer__social-media-container {
+        align-self: flex-start;
+        margin-right: 16px;
     }
 }

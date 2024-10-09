@@ -11,18 +11,22 @@ import SuccessfulLoginModal from '../SuccessfulLoginModal/SuccessfulLoginModal';
 import NothingFound from '../NothingFound/NothingFound';
 import Searching from '../Searching/Searching';
 import SavedArticles from '../SavedArticles/SavedArticles';
+import NavigationMenu from '../NavigationMenu/NavigationMenu';
 import UnsuccessfulSearch from '../UnsuccessfulSearch/UnsuccessfulSearch';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import newsLogo from "../../images/NewsExplorer.svg";
 import newsLogoBlack from "../../images/NewsExplorerBlack.svg";
 import logOutWhite from "../../images/logoutwhite.svg";
 import logOut from "../../images/logout.svg";
+import menuBlack from "../../images/menu.svg";
+import menuWhite from "../../images/white-menu.svg";
 import { getNewsItems } from '../../utils/ThirdPartyApi';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [loginModalOpened, setLoginModalOpened] = useState(false);
   const [registerModalOpened, setRegisterModalOpened] = useState(false);
+  const [navigationModalOpened, setNavigationModalOpened] = useState(false);
   const [keyword, setKeyword] = useState('');
   const [newsData, setNewsData] = useState([]);
   const [nothingFound, setNothingFound] = useState(false);
@@ -85,11 +89,21 @@ function App() {
   function handleLogInModalOpened() {
     setLoginModalOpened(true);
     setRegisterModalOpened(false);
+    setNavigationModalOpened(false);
   }
 
   function handleLogOutModalClosed(evt) {
     evt.preventDefault();
     setLoginModalOpened(false);
+  }
+
+  function handleNavigationModalOpened() {
+    setNavigationModalOpened(true);
+  }
+
+  function handleNavigationModalClosed(evt) {
+    evt.preventDefault()
+    setNavigationModalOpened(false);
   }
 
   function handleRegisterModalOpened() {
@@ -144,13 +158,13 @@ function App() {
         <Routes>
           <Route path='/' element={
             <div className="main-container">
-              <Header borderBottom='header_border-bottom-color_white' fontColor='header__home-btn_color_white' fontColorSavedArticle="header__saved-article_color_white" imageSrc={newsLogo} isLoggedIn={isLoggedIn} logoutSrc={logOutWhite} border='header__profile_border-color_white' homeBorder='header__home-btn_border-color_white' handleLogOutButton={handleLogOutButton} handleModal={handleLogInModalOpened} borderBottom2="" fontColorProfile="header__profile_color_white" fontColorSignin="header__signin_color_white"/>
+              <Header borderBottom='header_border-bottom-color_white' fontColor='header__home-btn_color_white' fontColorSavedArticle="header__saved-article_color_white" imageSrc={newsLogo} isLoggedIn={isLoggedIn} logoutSrc={logOutWhite} border='header__profile_border-color_white' homeBorder='header__home-btn_border-color_white' handleLogOutButton={handleLogOutButton} handleModal={handleLogInModalOpened} borderBottom2="" fontColorProfile="header__profile_color_white" fontColorSignin="header__signin_color_white" menu={menuWhite} handleNavigationModal={handleNavigationModalOpened}/>
               <Main handleSubmit={handleSearchNews} setKeyword={setKeyword}/>
           </div>
           }></Route>
           <Route path='/saved-news' element={
             <div className="saved-news">
-              <Header borderBottom='header_border-bottom-color_gray' fontColor='header__home-btn_color_black' imageSrc={newsLogoBlack} isLoggedIn={isLoggedIn} logoutSrc={logOut} border='header__profile_border-color_black' borderBottom2="header__saved-article_border-bottom-color_black" handleLogOutButton={handleLogOutButton} homeBorder="" fontColorSavedArticle="header__saved-article_color_black" fontColorProfile="header__profile_color_black" fontColorSignin="header__signin_color_black"/>
+              <Header borderBottom='header_border-bottom-color_gray' fontColor='header__home-btn_color_black' imageSrc={newsLogoBlack} isLoggedIn={isLoggedIn} logoutSrc={logOut} border='header__profile_border-color_black' borderBottom2="header__saved-article_border-bottom-color_black" handleLogOutButton={handleLogOutButton} homeBorder="" fontColorSavedArticle="header__saved-article_color_black" fontColorProfile="header__profile_color_black" fontColorSignin="header__signin_color_black" menu={menuBlack} handleNavigationModal={handleNavigationModalOpened}/>
               <SavedArticles newsData={newsData} handleUnsaveCard={handleUnsaveCard} setSavedCards={setSavedCards} savedCards={savedCards} keyword={keyword} keywords={keywords} keywordText={keywordText} handleKeywords={handleKeywords} handleKeywordText={handleKeywordText} isLoggedIn={isLoggedIn}/>
             </div>
           }></Route>
@@ -173,6 +187,7 @@ function App() {
         <RegisterModal modalOpened={registerModalOpened} onClose={handleRegisterModalClosed} handleLoginOpen={handleLogInModalOpened}/>
         <LoginModal onClose={handleLogOutModalClosed} modalOpened={loginModalOpened} handleRegisterOpen={handleRegisterModalOpened}/>
         <SuccessfulLoginModal />
+        <NavigationMenu isLoggedIn={isLoggedIn} handleLogOutButton={handleLogOutButton} logoutSrc={logOutWhite} handleModal={handleLogInModalOpened} navigationModalOpened={navigationModalOpened} handleNavigationModal={handleNavigationModalClosed}></NavigationMenu>
     </div>
     :
     <UnsuccessfulSearch></UnsuccessfulSearch>

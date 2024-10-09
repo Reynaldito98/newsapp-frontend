@@ -1,5 +1,7 @@
 .page {
-  max-width: 100vw;
+  width: 100vw;
+  outline: 1px solid transparent;
+  outline-offset: -1px;
   padding: 0px;
   margin: 0px;
   font-family: 'Inter', sans-serif;
@@ -12,11 +14,18 @@
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  max-width: 100vw;
+  width: 100%;
   height: 576px;
   opacity: 0.9;
 }
 
 .saved-news {
   background-color: #fff;
+}
+
+@media screen and (max-width: 320px) {
+  .main-container {
+    width: 320px;
+    background-size: 320px 576px;
+  }
 }

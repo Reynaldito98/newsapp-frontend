@@ -3,7 +3,7 @@
     flex-direction: column;
     height: 496px;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     padding-top: 80px;
 }
 
@@ -129,10 +129,6 @@
         line-height: 45px;
     }
 
-    .main-page__input {
-        width: 200px;
-    }
-
     .main-page__description {
         font-size: 15px;
         max-width: 400px;
@@ -141,10 +137,6 @@
 
     .main-page__input-container {
         margin-top: 20px;
-    }
-
-    .main-page__input {
-        width: 200px;
     }
 
     .main-page__button {
@@ -160,7 +152,7 @@
     }
 
     .main-page__title {
-        font-size: 35px;
+        font-size: 36px;
         line-height: 40px;
         max-width: 300px;
     }
@@ -183,5 +175,39 @@
 
     .main-page__input-container { 
         margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main-page__container {
+        justify-content: flex-start;
+        width: 285px;
+        align-items: center;
+    }
+
+    .main-page__description {
+        width: 288px;
+        margin-top: 16px;
+    }
+
+    .main-page__input-container {
+        margin-top: 122px;
+    }
+
+    .main-page__button {
+       position: static;
+       width: 100%;
+    }
+
+    .main-page__input {
+        width: 273px;
+     }
+
+    .main-page__input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 288px;
     }
 }

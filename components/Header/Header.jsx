@@ -8,6 +8,10 @@ function Header(props) {
                 <img src={props.imageSrc} alt="news-explorer-logo" title="news-explorer-logo" className="header__logo"/>
             </div>
 
+            <button className="header__menu-button" onClick={props.handleNavigationModal}>
+                <img src={props.menu} alt="menu button" className="header__menu-image"></img>
+            </button>
+
             <nav className="header__right-column">
                 <Link to='/' type="button" className={`header__home-btn ${props.fontColor} ${props.homeBorder}`}>Home</Link>
                 {props.isLoggedIn 

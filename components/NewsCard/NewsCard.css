@@ -119,6 +119,38 @@
 
 @media screen and (max-width: 570px) {
     .news-card {
-        width: 280px;
+        width: 288px;
+    }
+
+    .news-card__container {
+        display: block;
+        height:auto;
+    }
+
+    .news-card__image {
+        height: 188px;
+    }
+    
+    .news-card__date {
+        margin-top: 16px;
+    }
+
+    .news-card__heading {
+        margin-top: 10px;
+        padding: 0px;
+    }
+
+    .news-card__description {
+        margin-top: 14px;
+        padding: 0px;
+    }
+
+    .news-card__category {
+        justify-self:normal;
+    }
+
+    .news-card__category {
+        margin-top: 30px;
+        justify-self:auto;
     }
 }

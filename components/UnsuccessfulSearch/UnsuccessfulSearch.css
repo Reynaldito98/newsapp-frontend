@@ -3,6 +3,8 @@
     display: flex;
     width: 100vw;
     height: 100vh;
+    outline: 1px solid transparent;
+    outline-offset: -1px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -19,4 +21,11 @@
 .unsuccessful__image {
     width: 300px;
     height: 300px;
+}
+
+@media screen and (max-width: 500px) {
+    .unsuccessful__image {
+        width: 150px;
+        height: 150px;
+    }
 }

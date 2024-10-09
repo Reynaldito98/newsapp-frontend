@@ -1,5 +1,6 @@
 import './NewsCard.css';
 import {useEffect, useState } from 'react';
+import black from '../../images/black.jpeg';
 
 function NewsCard(props) {
     const [savedCard, setSavedCard] = useState(false);
@@ -23,12 +24,12 @@ function NewsCard(props) {
 
     return(
         <li className="news-card">
-            <img src={props.card.urlToImage} alt={props.card.title} className="news-card__image"></img>
+            <img src={props.card.urlToImage?props.card.urlToImage:black} alt={props.card.title} className="news-card__image"></img>
             <div className="news-card__container">
                 <p className="news-card__date">{formattedDate}</p>
-                <h3 className="news-card__heading">{props.card.title}</h3>
-                <p className="news-card__description">{props.card.description}</p>
-                <h3 className="news-card__category">{props.card.source.name}</h3>
+                <h3 className="news-card__heading">{props.card.title==='[Removed]'?'Not available':props.card.title}</h3>
+                <p className="news-card__description">{props.card.description==='[Removed]'?'':props.card.description}</p>
+                <h3 className="news-card__category">{props.card.source.name==='[Removed]'?'':props.card.source.name}</h3>
             </div>
             <div className="news-card__save-container">
                 <p className="news-card__save-description">{props.description}</p>

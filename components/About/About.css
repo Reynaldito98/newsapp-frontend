@@ -81,8 +81,8 @@
 
 @media screen and (max-width: 450px) {
     .about__image {
-        width: 300px;
-        height: 300px;
+        width: 272px;
+        height: 272px;
     }
 
     .about {
@@ -90,10 +90,10 @@
     }
 
     .about__title {
-        text-align: center;
+        padding-left: 16px;
     }
 
     .about__description {
-        text-align: center;
+        padding-left: 16px;
     }
 }

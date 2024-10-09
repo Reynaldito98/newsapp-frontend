@@ -1,11 +1,12 @@
 .header {
     display: flex;
-    width: 100vw;
+    width: 100%;
     justify-content: space-between;
-    height: 80px;
+    min-height: 80px;
     align-items: center;
     padding-top: 19px;
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
 }
 
 .header_border-bottom-color_white {
@@ -30,6 +31,16 @@
     height: 100%;
 }
 
+.header__menu-button {
+    display: none;
+    border: none;
+}
+
+.header__menu-image{
+    width: 24px;
+    height: 24px;
+}
+
 .header__home-btn {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
@@ -37,7 +48,7 @@
     line-height: 24px;
     background-color: transparent;
     border-radius: 0px;
-    height: 95%;
+    height: 80px;
     max-width: 68px;
     padding-left: 10px;
     padding-right: 10px;
@@ -67,7 +78,7 @@
     font-family: 'Roboto', sans-serif;
     opacity: 0.6;
     transition: 0.25s ease-in-out;
-    height: 90%;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;    
@@ -165,8 +176,6 @@
 
 @media screen and (max-width: 790px) {
     .header {
-        flex-direction: column;
-        align-items: center;
         height: 110px;
     }
 
@@ -195,11 +204,54 @@
         height: 50px;
         width: 130px;
     }
+
+    .header__right-column {
+        gap: 20px;
+    }
 }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 645px) {
+    .header {
+        height: 56px;
+        padding-bottom: 10px;
+        padding-left: 12px;
+    }
+
     .header__logo {
-        padding-left: 15px;
+        padding-left: 0px
+    }
+
+    .header__right-column {
+        margin-top: 20px;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0px;
+        display: none;
+    }
+
+    .header__home-btn {
+        border: none;
+    }
+
+    .header__saved-article {
+        border: none;
+    }
+
+    .header__menu-button {
+        display: block;
+        background-color: transparent;
+        padding-right: 0px;
+        margin-right: 16px;
+        transition: 0.4s ease-in-out;
+    }
+
+    .header__menu-button:hover {
+        opacity: 0.5;
+        border: none;
+    }
+
+    .header__menu-button:active {
+        border: none;
     }
 }
 
@@ -217,31 +269,5 @@
     .header__signin {
         height: 35px;
         width: 100px;
-    }
-}
-
-@media screen and (max-width: 645px) {
-    .header {
-        height: 190px;
-        padding-bottom: 10px;
-    }
-
-    .header__logo {
-        padding-left: 0px;
-    }
-
-    .header__right-column {
-        margin-top: 20px;
-        flex-direction: column;
-        gap: 15px;
-        padding: 0px;
-    }
-
-    .header__home-btn {
-        border: none;
-    }
-
-    .header__saved-article {
-        border: none;
     }
 }
