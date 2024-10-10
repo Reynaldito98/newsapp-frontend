@@ -1,6 +1,5 @@
 .page {
-  width: 100vw;
-  box-sizing: border-box;
+  max-width: 100%;
   padding: 0px;
   margin: 0px;
   font-family: 'Inter', sans-serif;
