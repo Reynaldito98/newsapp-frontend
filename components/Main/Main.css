@@ -1,0 +1,213 @@
+.main-page {
+    display: flex;
+    flex-direction: column;
+    height: 496px;
+    align-items: center;
+    width: 100%;
+    padding-top: 80px;
+}
+
+.main-page__container {
+    max-width: 608px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-page__title{
+    margin-top: 0px;
+    font-size: 60px;
+    line-height: 64px;
+    color: #fff;
+    font-weight: 400;
+    height: 128px;
+    max-width: 608px;
+    font-family: 'Roboto Slab', 'Roboto', sans-serif;
+}
+
+.main-page__description {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.main-page__input-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    position: relative;
+}
+
+.main-page__input {
+    width: 608px;
+    height: 44px;
+    border-radius: 25px;
+    background-color: #fff;
+    padding-left: 15px;
+    color: #000;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.main-page__input::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.main-page__button {
+    position: absolute;
+    width: 168px;
+    background-color: #2F71E5;
+    border-radius: 25px;
+    right: 0px;
+    height: 50px;
+    transition: 0.4s ease-in-out;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.main-page__button:hover{
+    background-color: #347EFF;
+    border: none;
+}
+
+.main-page__button:active{
+    background-color: #2A65CC;
+    border: none;
+}
+
+.main-page__button:disabled {
+    pointer-events: none;
+}
+
+.main-page__error-message {
+    margin-top: 15px;
+    color: rgb(222, 81, 81);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 650px) {
+    .main-page__title{
+        font-size: 50px;
+        line-height: 55px;
+        max-width: 500px;
+        height: 64px;
+    }
+
+    .main-page__description {
+        font-size: 18px;
+        line-height: 24px;
+        max-width: 500px;
+    }
+
+    .main-page__input-container {
+        margin-top: 30px;
+    }
+
+    .main-page__input {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .main-page__title{
+        font-size: 40px;
+        line-height: 45px;
+    }
+
+    .main-page__description {
+        font-size: 15px;
+        max-width: 400px;
+        line-height: 19px;
+    }
+
+    .main-page__input-container {
+        margin-top: 20px;
+    }
+
+    .main-page__button {
+        position: absolute;
+        width: 120px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .main-page {
+        padding-top: 40px;
+        align-items: center;
+    }
+
+    .main-page__title {
+        font-size: 36px;
+        line-height: 40px;
+        max-width: 300px;
+    }
+
+    .main-page__description {
+        font-size: 15px;
+        max-width: 300px;
+        line-height: 19px;
+        margin-top: 50px;
+    }
+
+    .main-page__input-container {
+        margin-top: 50px;
+    }
+
+    .main-page__button {
+        position: absolute;
+        width: 90px;
+    }
+
+    .main-page__input-container { 
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main-page__container {
+        justify-content: flex-start;
+        width: 285px;
+        align-items: center;
+    }
+
+    .main-page__description {
+        width: 288px;
+        margin-top: 16px;
+    }
+
+    .main-page__input-container {
+        margin-top: 122px;
+    }
+
+    .main-page__button {
+       position: static;
+       width: 100%;
+    }
+
+    .main-page__input {
+        width: 273px;
+     }
+
+    .main-page__input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 288px;
+    }
+}

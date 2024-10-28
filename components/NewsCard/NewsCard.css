@@ -1,0 +1,156 @@
+.news-card {
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease-in-out; 
+    position: relative;
+}
+
+.news-card:hover {
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.news-card__image {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 272px;
+}
+
+.news-card__container{
+    padding-left: 24px;
+    padding-right: 24px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 278px);
+    padding-bottom: 0px;
+}
+
+.news-card__date {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #B6BCBF;
+    margin-top: 20px;
+    padding: 0;
+}
+
+.news-card__heading {
+    font-size: 24px;
+    line-height: 30px;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: 500;
+    color: #1A1B22;
+    margin-top: 12px;
+    padding: 0;
+}
+
+.news-card__description {
+    margin-top: 15px;
+    margin-bottom: 84px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    overflow: hidden;
+}
+
+.news-card__category {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #B6BCBF;
+    margin-top: auto;
+    font-family: 'Roboto Slab', sans-serif;
+    justify-self: flex-end;
+
+}
+
+.news-card__save {
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.news-card__save-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #000;
+}
+
+.news-card__save-description {
+    padding: 10px 20px 10px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    max-height:18px;
+    font-weight: 700;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 12px;
+}
+
+.news-card__save-container:hover .news-card__save-description{
+    visibility: visible;
+    opacity: 1;
+}
+
+.news-card__keyword {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: #fff;
+    max-height: 18px;
+    padding: 10px 20px 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 10px;
+    color: #000;
+}
+
+@media screen and (max-width: 570px) {
+    .news-card {
+        width: 288px;
+    }
+
+    .news-card__container {
+        display: block;
+        height:auto;
+    }
+
+    .news-card__image {
+        height: 188px;
+    }
+    
+    .news-card__date {
+        margin-top: 16px;
+    }
+
+    .news-card__heading {
+        margin-top: 10px;
+        padding: 0px;
+    }
+
+    .news-card__description {
+        margin-top: 14px;
+        padding: 0px;
+    }
+
+    .news-card__category {
+        justify-self:normal;
+    }
+
+    .news-card__category {
+        margin-top: 30px;
+        justify-self:auto;
+    }
+}
