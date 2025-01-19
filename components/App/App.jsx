@@ -124,9 +124,9 @@ function App() {
      .then(data => {
         setSearchSuccessful(true);
         setSearchResultVisible(true);
-        if(data.articles.length!==0) {
+        if(data["data"].length!==0) {
           setNothingFound(false);
-          setNewsData(data.articles); 
+          setNewsData(data["data"]); 
         } else {
           setNothingFound(true);
         }
@@ -144,12 +144,12 @@ function App() {
   }
 
   useEffect(() => {
-      const cards = localStorage.getItem('newsCards');
+    const cards = localStorage.getItem('newsCards');
 
-      if(cards) {
-        setNewsData(JSON.parse(cards));
-        setSearchResultVisible(true);
-      }
+    if(cards) {
+      setNewsData(JSON.parse(cards));
+      setSearchResultVisible(true);
+    }
   }, []);
 
   return (

@@ -9,7 +9,7 @@ function NewsCard(props) {
         month: 'long',
         day: 'numeric'
     }
-    const formattedDate = new Date(props.card.publishedAt.slice(0, 10)).toLocaleDateString('en-US', options);
+    const formattedDate = new Date(props.card.published_at.slice(0, 10)).toLocaleDateString('en-US', options);
 
     useEffect(() => {
         if(props.savedCards.length!==0){
@@ -24,12 +24,12 @@ function NewsCard(props) {
 
     return(
         <li className="news-card">
-            <img src={props.card.urlToImage?props.card.urlToImage:black} alt={props.card.title} className="news-card__image"></img>
+            <img src={props.card.image_url?props.card.image_url:black} alt={props.card.title} className="news-card__image"></img>
             <div className="news-card__container">
                 <p className="news-card__date">{formattedDate}</p>
                 <h3 className="news-card__heading">{props.card.title==='[Removed]'?'Not available':props.card.title}</h3>
                 <p className="news-card__description">{props.card.description==='[Removed]'?'':props.card.description}</p>
-                <h3 className="news-card__category">{props.card.source.name==='[Removed]'?'':props.card.source.name}</h3>
+                <h3 className="news-card__category">{props.card.source==='[Removed]'?'':props.card.source.name}</h3>
             </div>
             <div className="news-card__save-container">
                 <p className="news-card__save-description">{props.description}</p>
